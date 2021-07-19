@@ -1,8 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from 'react';
 import './MovieRow.css';
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 export default ({ title, items }) => {
     const [scrollX, setScrollX] = useState(-400);
@@ -27,10 +26,10 @@ export default ({ title, items }) => {
         <div className="movieRow">
             <h2>{title}</h2>
             <div className="movieRow--left" onClick={handleLeftArrow}>
-                <NavigateBeforeIcon style={{ fontSize: 50 }} />
+                <FaArrowAltCircleLeft style={{ fontSize: 20 }} />
             </div>
             <div className="movieRow--right" onClick={handleRightArrow}>
-                <NavigateNextIcon style={{ fontSize: 50 }} />
+                <FaArrowAltCircleRight style={{ fontSize: 20 }} />
             </div>
             <div className="movieRow--listarea">
                 <div className="movieRow--list" style={{
